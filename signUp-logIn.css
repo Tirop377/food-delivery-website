@@ -1,0 +1,211 @@
+
+.pop-up{
+    width: 29%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: none;
+    
+}
+
+.sign-up-popup-container{
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px 30px;
+    background-color: rgb(243, 235, 235); 
+}
+
+.signUp-header{
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signUp-header h2{
+    font-size: 30px;
+}
+
+.close-signUp-btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 600;
+    background-color: rgb(243, 235, 235);
+}
+
+.sign-up-popup-container form{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputDiv{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.eye{
+    position: absolute;
+    background-color: white;
+    top: 25px;
+    right: 20px;
+    cursor: pointer;
+    height: 26px;
+    transition: all 0.4;
+}
+
+.textRepeatPassword, .textPassword{
+    display: none;
+}
+
+.name-input, .email-input, .pass{
+    margin-top: 15px;
+    padding: 12px 15px;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    border-radius: 8px;
+}
+
+
+.create-account-btn{
+    background-color: orangered;
+    width: 100%;
+    padding: 15px 15px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 19px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.terms-chekbox{
+    margin-right: 8px;
+    transform: translateY(2px);
+    width: 18px;
+    height: 18px;
+}
+
+
+
+.sign-up-popup-container form p{
+    margin-top: 20px;
+}
+
+.login-btn{
+    border: none;
+    outline: none;
+    color: orangered;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgb(243, 235, 235);
+    cursor: pointer;
+}
+
+#overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.726);
+    pointer-events: none;
+    z-index: 9;
+    display: none;
+}
+
+/* login in form */
+.logIn-container{
+    width: 100%;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: rgb(243, 235, 235);
+}
+
+.logIn-header{
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logIn-header h2{
+    font-size: 30px;
+}
+
+.close-Login-btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 600;
+    background-color: rgb(243, 235, 235);
+}
+
+.logIn-container form{
+    display: flex;
+    flex-direction: column;
+}
+
+.email-input, .password-input{
+    margin-top: 15px;
+    padding: 15px 15px;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.error{
+    color: red;
+    margin-top: 5px;
+    padding-left: 5px;
+    font-style: italic;
+}
+
+.logIn-btn{
+    background-color: orangered;
+    width: 100%;
+    padding: 15px 15px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 19px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.logIn-container form p{
+    margin-top: 30px;
+}
+
+.signUP-btn{
+    border: none;
+    outline: none;
+    color: orangered;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgb(243, 235, 235);
+    cursor: pointer;
+}
+
+
+.active{
+    display: block;
+}

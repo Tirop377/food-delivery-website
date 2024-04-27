@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-section{
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-bottom: 30px;
+}
+
+header{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.links{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.links a{
+     font-size: 20px;
+     text-decoration: none;
+     color: black;
+     transition: all 0.5s;
+     position: relative;
+}
+
+.links a:hover{
+    color: orangered;
+}
+
+.links a::after{
+    content: "";
+    border: 3px solid black;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0px;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.links a:hover::after{
+    visibility: visible;
+    left: 0;
+    width: 100%;
+}
+
+.right-div{
+    padding-right: 30px;
+    display: flex;
+    gap: 32px;
+}
+
+.right-div img{
+    transform:translateY(7px);
+    cursor: pointer;
+}
+
+.sign-in{
+    padding: 10px 35px;
+    background-color: rgb(13, 218, 13);
+    color: whitesmoke;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 600;
+    transition: all 0.5s;  
+}
+
+.sign-in:hover{
+     transform: scale(1.2);
+}
+
+
+.main{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.item{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.icon{
+    display: inline;
+    width: 12px;
+    margin-right: 5px;
+}
+
+.trackbtn{
+    padding: 10px 20px;
+    background-color: orangered;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer area */
+footer{
+    margin-top: 100px;
+}
+
+.some-stuff{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.some-stuff h3{
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.bottom-container{
+    color: rgb(204, 195, 195);
+    background-color: rgb(19, 18, 18);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    padding: 60px;
+}
+
+.div1{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.div1 p{
+    font-size: 15px;
+}
+
+.socials{
+    display: flex;
+    gap: 20px;
+}
+
+.div2{
+    padding-left: 100px;
+}
+
+.div2 ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.div2 ul a{
+    color: rgb(204, 195, 195);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.div2 h3 , .div3 h3{
+    color: white;
+    margin-bottom: 15px;
+}
+
+.div3 span{
+    font-size: 15px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.copy{
+    margin-top: 40px;
+    text-align: center;
+    grid-column: 1 / 5;
+}
+

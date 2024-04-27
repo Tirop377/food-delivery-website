@@ -1,0 +1,250 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    padding-top: 120px;
+    padding-left: 20%;
+}
+
+header{
+    width: 100%;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+header h1{
+    font-size: 22px;
+}
+
+.profile img{
+    width: 80px;
+    border-radius: 50%;
+}
+
+.sideBar{
+    width: 18%;
+    position: fixed;
+    top: 95px;
+    left: 0;
+    border-right: 2px solid gray;
+    height: 120vh;
+    background-color: white;
+}
+
+.image{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.sideBar div{
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+}
+
+.sideBar div button{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    font-size: 17px;
+    border-right: none;
+    cursor: pointer;
+    padding: 5px;
+
+}
+
+
+/* Orders area */
+.mainContainer{
+    padding-right: 20px;
+}
+
+.ordersDisplay{
+    display: none;
+}
+
+.ordersContainer{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.description{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.trackbtn{
+    padding: 10px 15px;
+    
+    border: none;
+    cursor: pointer;
+
+}
+
+.progress{
+    padding: 10px 15px;
+    font-size: 15px;
+    margin-right: 10px;
+    background-color: rgba(255, 68, 0, 0.308);
+  
+}
+
+
+
+
+/* list of all food items */
+.listAllitems{
+    display: none;
+}
+.itemsContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.headings, .foodItem{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 5px 0px;
+}
+
+.headings div, .foodItem div{
+    width: 20%;
+}
+
+
+.headings{
+    font-size: 19px;
+    color: gray;
+    background-color: whitesmoke;
+}
+
+.foodItem img{
+    width: 80px;
+}
+
+.deleteButton{
+    padding: 10px 20px;
+    background-color: white;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* 
+add food item
+ */
+ .addFoodItem{
+    height: 150vh;
+    display: none;
+ }
+
+.addFoodItem h2{
+   margin-bottom: 30px;
+}
+
+.addFoodItem form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.addFoodItem form .first{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.imageInput{
+    display: none;
+}
+.productImage{
+    width: 140px;
+}
+
+.productImage img{
+    height: 130px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+#foodName{
+    width: 45%;
+    padding: 10px 5px;
+    font-size: 17px;
+}
+
+#description{
+    width: 45%;
+    font-size: 17px;
+    padding: 5px;
+}
+
+.second{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.third{
+    padding: 10px 20px;
+    font-size: 17px;
+}
+
+.addFoodItemButton{
+    padding: 10px 50px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

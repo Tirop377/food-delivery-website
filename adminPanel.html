@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="adminPanel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="leftDiv">
+            <img src="./resources/logo.png" alt="">
+            <h1>Admin Panel</h1>
+        </div>
+
+        <div class="profile">
+            <img src="./resources/profile-pic.jpg" alt="">
+        </div>
+    </header>
+
+    <section class="sideBar">
+        <div>
+            <button class="addItems-sideBar-button"> <img src="./resources/icons/add_icon_white.png" alt="" class="image">Add items</button>
+            <button class="sideBar-listItems-button"> <img src="./resources/icons/items.png" alt="" class="image">List items</button>
+            <button class="orders-sideBar-button"><img src="./resources/icons/order.png" alt="" class="image">Orders</button>
+        </div>
+    </section>
+
+    <main>
+        <div class="mainContainer">
+            <div class="ordersDisplay">
+                <h2>Orders</h2>
+                <div class="ordersContainer">
+                <div class="order">
+                    <div>
+                        <img src="./resources/icons/parcel_icon.png" alt="">
+                    </div>
+                    <div>
+                        <h4> Date: April 21</h4>
+                    </div>
+                    <div class="description">
+                        <p>Githeri &times; 3, Waru &times; 6</p>
+                        <h4 >Kevin Biwott</h4>
+                        <p>
+                            Juja
+                            Gashoror
+                            GraceLand Building
+                        </p> 
+                    </div>
+                    <div class="totalPrice">
+                        Ksh 500.00
+                    </div>
+                    <div>
+                        items: 2
+                    </div>
+                    <div>
+                        <select name="progress" id="progress" class="progress">
+                            <option value="Food Processing">Food Processing</option>
+                            <option value="Food Delivering">Out for Delivering</option>
+                            <option value="Food Preparing">Delivered</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="order">
+                    <div>
+                        <img src="./resources/icons/parcel_icon.png" alt="">
+                    </div>
+                    <div>
+                        <h4> Date: April 21</h4>
+                    </div>
+                    <div class="description">
+                        <p>Githeri &times; 3, Waru &times; 6</p>
+                        <h4 >Kevin Biwott</h4>
+                        <p>
+                            Juja
+                            Gashoror
+                            GraceLand Building
+                        </p> 
+                    </div>
+                    <div class="totalPrice">
+                        Ksh 500.00
+                    </div>
+                    <div>
+                        items: 2
+                    </div>
+                    <div>
+                        <select name="progress" id="progress" class="progress">
+                            <option value="Food Processing">Food Processing</option>
+                            <option value="Food Delivering">Out for Delivering</option>
+                            <option value="Food Preparing">Delivered</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+            <div class="listAllitems">
+                 <h2>All Food List</h2>
+            <div class="headings">
+                <div>
+                    <h3>Image</h3>
+                </div>
+                <div>
+                     <h3>Name</h3>
+                </div>
+                <div>
+                    <h3>Gategory</h3>
+                </div>
+                <div>
+                    <h3>Price</h3>
+                </div>
+                <div>
+                    <h3>Action</h3>
+                </div>
+            </div>
+            <div class="itemsContainer"></div>
+            </div>
+
+            <div class="addFoodItem">
+                <h2>Add Item</h2>
+
+                <form action="">
+                    <div class="first">
+                        <label for="image" class="productImage">Upload image</label>
+                        <label for="image" class="productImage"><img src="./resources/icons/upload.png" class="proImage" alt=""></label>
+                        <input class="imageInput" type="file" name="image" id="image" alt="abc" accept="image/jpg, image/png, image/jpeg" required>
+                    </div>
+                    <div class="first">
+                        <label for="foodName">Product Name</label>
+                        <input type="text" name="foodName" id="foodName" placeholder="Type here" required>
+                    </div>
+                    <div class="first">
+                        <label for="description">Product Description</label>
+                        <textarea id="description" name="description" rows="7" cols="50" placeholder="Write content here" required></textarea>
+                    </div>
+
+                    <div class="second">
+                        <div class="first">
+                            <label for="category">Category</label>
+                            <select name="category" id="category" class="third" required>
+                                <option value="Salad">Salad</option>
+                                <option value="Cake">Cake</option>
+                                <option value="Pure Veg">Pure Veg</option>
+                                <option value="Desert">Desert</option>
+                            </select> 
+                        </div>
+                        <div class="first">
+                            <label for="price">Price in Ksh</label>
+                            <input type="number" name="price" id="price" placeholder="eg. 120.00" class="third" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="addFoodItemButton">ADD</button>
+                    </div> 
+                </form>
+            </div>
+        </div>
+
+    </main>
+    <script src="adminPanel.js"></script>
+</body>
+</html>
