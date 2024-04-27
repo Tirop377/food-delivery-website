@@ -4,8 +4,8 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+    transform: translate(-50%, -42%);
+    z-index: 16;
     display: none;
     
 }
@@ -121,7 +121,7 @@
     right: 0;
     background-color: rgba(0, 0, 0, 0.726);
     pointer-events: none;
-    z-index: 9;
+    z-index: 15;
     display: none;
 }
 

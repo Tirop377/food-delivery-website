@@ -57,6 +57,7 @@ const logInFormHtml = `
 const container = document.querySelector(".pop-up");
 const signInButton = document.querySelector(".sign-in");
 const overlay = document.querySelector("#overlay");
+const loginHeaderButton = document.querySelector(".log-in-btn");
 
 const userFormData = {
     firstName :"",
@@ -73,6 +74,7 @@ let password = "";
 let repeatPassword = "";
 
 signInButton.addEventListener('click', ()=>loadPopup());
+loginHeaderButton.addEventListener('click', ()=>loadLoginForm())
 
 function loadPopup() {
     container.classList.add("active");
@@ -224,7 +226,10 @@ let loginEmail = "";
 let loginPassword = "";
 
 function loadLoginForm(){
+    container.classList.add("active");
     container.innerHTML = logInFormHtml;
+    overlay.style.display = "block";
+    overlay.style.pointerEvents = "all";
     closeForm();
     document.querySelector("#loginForm").addEventListener('submit', (e)=>{
         e.preventDefault();

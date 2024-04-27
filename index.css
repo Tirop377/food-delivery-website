@@ -8,34 +8,66 @@
 body{
     display: flex;
     flex-direction: column;
+    background-color: whitesmoke;
 }
 
 .main-section{
+    margin-top: 110px;
     padding-left: 70px;
     padding-right: 70px;
 }
 
 header{
-    height: 70px;
+    width: 100%;
+    position: fixed;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
-    margin-top: 15px;
+    padding: 40px 20px;
+    background-color: white;
+    z-index: 10;
+}
+
+.searchForm{
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    min-width: 30%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+.searchForm input{
+    width: 100%;
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+
+}
+
+.searchForm img{
+    height: 18px;
 }
 
 .links{
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .links a{
-     font-size: 20px;
+     font-size: 18px;
      text-decoration: none;
      color: black;
      transition: all 0.5s;
      position: relative;
+}
+
+#toMenu{
+    scroll-behavior: smooth;
 }
 
 .links a:hover{
@@ -60,30 +92,65 @@ header{
 }
 
 .right-div{
-    padding-right: 30px;
     display: flex;
-    gap: 32px;
+    align-items: center;
+    gap: 25px;
 }
 
-.right-div img{
-    transform:translateY(7px);
+.cartDiv{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.cart-link{
+    position: relative;
+}
+
+.cartQuantityToolTip{
+    position: absolute;
+    padding: 5px 15px;
+    background-color: aqua;
+    top: 150%;
+    white-space: nowrap;
+    display: none; 
+}
+
+.cartDiv:hover .cartQuantityToolTip{
+    display: inline-block;
+}
+
+.right-div .cart-img{
     cursor: pointer;
+    height: 30px;
+}
+.right-div .dot{
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    display: none;
 }
 
-.sign-in{
-    padding: 10px 35px;
-    background-color: rgb(13, 218, 13);
+.sign-in, .log-in-btn{
+    padding: 10px 20px;
+    background-color: rgba(255, 68, 0, 0.822);
     color: whitesmoke;
-    border-radius: 20px;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 600;
     transition: all 0.5s;  
 }
 
-.sign-in:hover{
-    transform: scale(1.2);
+.sign-in:hover, .log-in-btn:hover{
+    transform: scale(1.1);
 }
 
 .image-back{
@@ -223,6 +290,10 @@ header{
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
+}
+
+.food-title img{
+    height: 20px;
 }
 
 .food-title .food-name{

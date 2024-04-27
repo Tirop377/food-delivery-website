@@ -343,8 +343,7 @@ function controlsEventListener() {
     handleQuantyty(); 
 }
 
-
-
+const dot = document.querySelector(".dot")
 
 function handleQuantyty() {
     let addFoodButton = document.querySelectorAll('.addButton');
@@ -353,6 +352,7 @@ function handleQuantyty() {
     let controlsDiv = document.querySelectorAll('.controls');
     addFoodButton.forEach((addbtn, index)=>{
         addbtn.addEventListener('click', ()=>{
+            dot.style.display = "inline-block"
             let foodName = addbtn.dataset.name;
             let foodId = addbtn.dataset.id;
             let itemFound = false;
@@ -373,7 +373,10 @@ function handleQuantyty() {
                 Foodcart.push({name: foodName, quantity: 1, id:foodId});
                 console.log(Foodcart);
             }
+            console.log(Foodcart);
         })
+
+        
     })   
 
     minusButtonElements.forEach((minusbtn, index)=>{
@@ -385,19 +388,31 @@ function handleQuantyty() {
                         item.quantity = item.quantity - 1;
                         quantitySpanElements[index].innerHTML = `${item.quantity}`;
                         if(item.quantity <= 0){
-                            Foodcart.slice(i, 1);
+                            Foodcart.splice(i, 1);
                             controlsDiv[index].style.backgroundColor = "transparent";
                             quantitySpanElements[index].style.display = "none";
                             minusButtonElements[index].style.display = "none";
+                            quantitySpanElements[index].innerHTML = 1;
                         } 
                     }
                 })
+            }
+            if(Foodcart.length === 0){
+                dot.style.display = "none"
             }
         })
     }) 
 }
 
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
 

@@ -11,23 +11,34 @@
     <link rel="stylesheet" href="signUp-logIn.css">
 </head>
 <body>
+    <div class="pop-up"></div>
+    <header>
+        <img src="resources/logo.png" alt="logo">
+        <form action="" class="searchForm">
+            <label for="search"><a href="#"> <img src="resources/icons/search_icon.png" alt="search" height="30px"></a>
+            </label>
+            <input type="search" name="search" id="search" placeholder="Search">
+        </form>
 
-    <section class="main-section">
-        <header>
-            <img src="resources/logo.png" alt="logo">
+        <div class="right-div">
             <ul class="links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Menu</a></li>
+                <li><a href="#menu-section" id="toMenu">Menu</a></li>
                 <li><a href="#">Mobile app</a></li>
                 <li><a href="#">Contact us</a></li>
-            </ul>
-            <div class="right-div">
-                <a href="#"> <img src="resources/icons/search_icon.png" alt="search" height="30px"></a>
-                <a href="cartPage.html"><img src="resources/icons/basket_icon.png" alt="search" height="30px"></a>
-                <button class="sign-in" >Sign in</button>
+            </ul> 
+            <div class="cartDiv">
+                <a href="cartPage.html" class="cart-link">
+                    <img src="resources/icons/basket_icon.png" alt="search" height="30px" class="cart-img">
+                    <span class="dot"></span>
+                </a>
+                <span class="cartQuantityToolTip">10 items</span>
             </div>
-        </header>
-
+            <button class="sign-in" >Sign in</button>
+            <button class="log-in-btn" >log in</button>
+        </div>
+    </header>
+    <section class="main-section">
         <div class="image-back">
             <div>
                 <h1>
@@ -40,7 +51,7 @@
             </div> 
         </div>
 
-        <section class="menu-section">
+        <section class="menu-section" id="menu-section">
             <h1>Explore our menu</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio vitae mollitia adipisci illo. Aut facere vitae totam iste <br> doloribus non porro cupiditate porro cupiditate.
