@@ -8,27 +8,57 @@
 body{
     display: flex;
     flex-direction: column;
+    background-color: rgb(238, 236, 236);
+    padding-top: 50px;
+    
 }
 
 .main-section{
-    padding-left: 70px;
-    padding-right: 70px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    padding: 0px 70px;
 }
 
 header{
-    height: 70px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
-    margin-top: 15px;
+    padding: 40px 20px;
+    background-color: white;
+    z-index: 10;
+}
+
+.searchForm{
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    min-width: 30%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+.searchForm input{
+    width: 100%;
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+
+}
+
+.searchForm img{
+    height: 18px;
 }
 
 .links{
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .links a{
@@ -37,6 +67,10 @@ header{
      color: black;
      transition: all 0.5s;
      position: relative;
+}
+
+#toMenu{
+    scroll-behavior: smooth;
 }
 
 .links a:hover{
@@ -61,31 +95,65 @@ header{
 }
 
 .right-div{
-    padding-right: 30px;
     display: flex;
-    gap: 32px;
+    align-items: center;
+    gap: 25px;
 }
 
-.right-div img{
-    transform:translateY(7px);
-    cursor: pointer;
+.userProfileContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.sign-in{
-    padding: 10px 35px;
-    background-color: rgb(13, 218, 13);
-    color: whitesmoke;
-    border-radius: 20px;
+.user-tooltip{
+    position: absolute;
+    padding: 5px 10px;
+    bottom: -40px;
+    background-color: aquamarine;
+    transform: scale(0);
+    transition: all .2s;
+}
+
+.user-profile{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
     border: none;
     cursor: pointer;
-    font-size: 22px;
-    font-weight: 600;
-    transition: all 0.5s;  
 }
 
-.sign-in:hover{
-     transform: scale(1.2);
+.userProfileContainer:hover .user-tooltip{
+    transform: scale(1);
 }
+.user-profile img{
+    width: 25px;  
+}
+
+.sign-in, .log-in-btn, .log-out-btn{
+    padding: 10px 20px;
+    background-color: rgba(255, 68, 0, 0.822);
+    color: whitesmoke;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: 600;
+    transition: all 0.5s;   
+}
+
+.log-out-btn, .user-profile{
+     display: none;
+}
+
+.sign-in:hover, .log-in-btn:hover, .log-out-btn:hover{
+    transform: scale(1.1);
+}
+
+
+
 
 
 .main{
@@ -114,6 +182,95 @@ header{
     border: none;
     cursor: pointer;
 }
+
+
+
+/* user info */
+.userInfoContainer{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+    transition: all .5s;
+}
+
+.deliveryinfo{
+    width: 1005;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 30px 40px;
+    background-color: rgba(245, 85, 27, 0.089);
+}
+
+.deliveryinfo input{
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0px;
+    font-size: 19px;
+    border: none;
+    outline-color: rgb(231, 83, 29);
+}
+
+.deliveryinfo div{
+    display: flex;
+    gap: 10px;
+
+}
+.deliveryinfo button{
+    padding: 10px 15px;
+    background-color: orangered;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.user{
+    width: 40%;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.user h3{
+    color: rgb(48, 46, 46);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.user-Image{
+    width: 30%;
+}
+
+.user-Image img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.user p{
+    margin: 10px 0px;
+}
+.user p span{
+    font-weight: bold;
+}
+
+.user button{
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background-color: rgba(255, 68, 0, 0.801);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form{
+    margin-top: 10px;
+    width: 40%;
+    display: none;
+    transition: all .5s;
+}
+
 
 
 

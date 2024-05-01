@@ -4,10 +4,9 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -42%);
+    transform: translate(-50%, -50%);
     z-index: 16;
-    display: none;
-    
+    display: none;  
 }
 
 .sign-up-popup-container{
@@ -173,6 +172,7 @@
     margin-top: 5px;
     padding-left: 5px;
     font-style: italic;
+    text-align: center;
 }
 
 .logIn-btn{
@@ -203,6 +203,10 @@
     font-weight: 500;
     background-color: rgb(243, 235, 235);
     cursor: pointer;
+}
+
+.forgotPassBtn{
+    text-decoration: none;
 }
 
 

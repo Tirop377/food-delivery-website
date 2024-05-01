@@ -8,40 +8,62 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signUp-logIn.css">
 </head>
 <body>
-    <section class="main-section">
-        <header>
-            <img src="resources/logo.png" alt="logo">
-            <ul class="links">
+    <div class="pop-up"></div>
+    <header>
+        <img src="resources/logo.png" alt="logo">
+        <ul class="links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Menu</a></li>
                 <li><a href="#">Mobile app</a></li>
                 <li><a href="#">Contact us</a></li>
-            </ul>
-            <div class="right-div">
-                <a href="#"><img src="resources/icons/search_icon.png" alt="search" height="30px"></a>
-                <a href="cartPage.html"><img src="resources/icons/basket_icon.png" alt="search" height="30px"></a>
-                <button class="sign-in" >Sign in</button>
+        </ul> 
+        <div class="right-div">
+            <div class="userProfileContainer">
+                <button class="user-profile"><img src="./resources/icons/profile_icon.png" alt=""></button>
+                <span class="user-tooltip">Kevin</span>
             </div>
-        </header>
+            <button class="log-out-btn" >log out</button>
 
-        <form class="main">
-            <div class="deliveryinfo">
-                <div>
-                    <input type="text" placeholder="First name" required>
-                    <input type="text" placeholder="Last name" required>
+            <button class="sign-in" >Sign in</button>
+            <button class="log-in-btn" >log in</button>
+        </div>
+    </header>
+    <section class="main-section">
+        <div class="userInfoContainer">
+            <div class="user">
+                <h3>Delivery Information</h3>
+                <div class="user-Image">
+                    <img src="./resources/profile-pic.jpg" alt="">
                 </div>
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Street">
-                <div>
-                    <input type="text" placeholder="City" required>
-                    <input type="text" placeholder="County" required>
-                </div>
-                <input type="text" placeholder="Phone number">
+                <p>Name: <span class="user-FullName">Kevin Biwott</span></p>
+                <p>Area Name: <span class="areaName">Juja</span></p>
+                <p>Street: <span class="street">Kiongo Street</span> </p>
+                <p>Building: <span class="building">Graceland Building</span> </p>
+                <p>Phone Number: <span>011555*****</span></p>
+
+                <button class="updateInfoBtn">Update</button>
+                
             </div>
-
-            <div class="orderSummary">
+            <form class="main form">
+                <div class="deliveryinfo">
+                    <div>
+                        <input type="text" class="firstNameInputBox" placeholder="First name" required>
+                        <input type="text" placeholder="Last name" required>
+                    </div>
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Street">
+                    <div>
+                        <input type="text" placeholder="Building" required>
+                        <input type="text" placeholder="Area Name" required>
+                    </div>
+                    <input type="text" placeholder="Phone number" required>
+                    <button type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+        <div class="orderSummary">
                 <h3>Order Summary</h3>
                 <div class="under">
                     <h4>Subtotal</h4>
@@ -56,17 +78,9 @@
                     <h4>Ksh 290</h4>
                 </div>
 
-                <button type="submit" class="proceedToCheckOutBtn">Proceed to Payment</button> 
+                <button type="button" class="proceedToPaymentBtn">Proceed to Payment</button> 
             </div>
-
-
-        </form>
-
-
-
     </section>
-
-
 
 
     <footer>
@@ -110,6 +124,10 @@
             </p>
         </div>
     </footer>
+    <div id="overlay"></div>
+
+    <script src="signUp-logIn.js"></script>
+    <script src="checkUoutPage.js"></script>
     
 </body>
 </html>

@@ -343,7 +343,8 @@ function controlsEventListener() {
     handleQuantyty(); 
 }
 
-const dot = document.querySelector(".dot")
+const dot = document.querySelector(".dot");
+const cartQuantityToolTip = document.querySelector(".cartQuantityToolTip");
 
 function handleQuantyty() {
     let addFoodButton = document.querySelectorAll('.addButton');
@@ -359,9 +360,11 @@ function handleQuantyty() {
             if(Foodcart.length > 0){
                 Foodcart.forEach((item)=>{
                     if(item.name === foodName){
-                        itemFound = true;
-                        item.quantity = item.quantity + 1;  
-                        quantitySpanElements[index].innerHTML = `${item.quantity}`;
+                         itemFound = true;
+                        if(item.quantity < 10){
+                            item.quantity = item.quantity + 1;  
+                            quantitySpanElements[index].innerHTML = `${item.quantity}`;
+                        }  
                     }
                 })
                 
@@ -373,10 +376,9 @@ function handleQuantyty() {
                 Foodcart.push({name: foodName, quantity: 1, id:foodId});
                 console.log(Foodcart);
             }
-            console.log(Foodcart);
-        })
-
-        
+            cartQuantityToolTip.innerHTML = `${Foodcart.length} items`;
+            
+        })  
     })   
 
     minusButtonElements.forEach((minusbtn, index)=>{
@@ -400,6 +402,7 @@ function handleQuantyty() {
             if(Foodcart.length === 0){
                 dot.style.display = "none"
             }
+            cartQuantityToolTip.innerHTML = `${Foodcart.length} items`;
         })
     }) 
 }
@@ -416,3 +419,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  if(window.scrollY > 810) {
+    loadLoginForm();
+  }
+}

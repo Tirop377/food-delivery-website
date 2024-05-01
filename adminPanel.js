@@ -308,8 +308,82 @@ sideBarListItemsBtn.addEventListener('click', ()=>{
     handleDeleteItem();
     ordersDisplayHtml.style.display = "none";
     addFoodItemHtml.style.display = "none";
+    updateItemName();
+    updateItemCategory();
+    updateItemPrice();
 })
 
+function updateItemName() {
+    const updateNameButtons = document.querySelectorAll(".updateNameButton");
+    const itemNameSpans = document.querySelectorAll(".itemName");
+    const itemNameInputs = document.querySelectorAll(".itemNameInput");
+    const saveUpdateNameButtons = document.querySelectorAll(".saveUpdateNameButton");
+
+    updateNameButtons.forEach((btn, index)=>{
+        btn.addEventListener('click', ()=>{
+            itemNameSpans[index].style.display = "none"
+            updateNameButtons[index].style.display = "none"
+            itemNameInputs[index].style.display = "inline-block"
+            saveUpdateNameButtons[index].style.display = "inline-block"
+
+            saveUpdateNameButtons[index].addEventListener('click', ()=>{
+                itemNameSpans[index].style.display = "inline-block"
+                updateNameButtons[index].style.display = "inline-block"
+                itemNameSpans[index].innerHTML = itemNameInputs[index].value;
+                itemNameInputs[index].style.display = "none"
+                saveUpdateNameButtons[index].style.display = "none"
+            })
+        })
+    })
+}
+
+function updateItemCategory() {
+    const updateCategoryButtons = document.querySelectorAll(".updateCategoryButton");
+    const itemCategorySpans = document.querySelectorAll(".itemCategory");
+    const itemCategoryInputs = document.querySelectorAll(".itemCategoryInput");
+    const saveUpdateCategoryButtons = document.querySelectorAll(".saveUpdateCategoryButton");
+
+    updateCategoryButtons.forEach((btn, index)=>{
+        btn.addEventListener('click', ()=>{
+            itemCategorySpans[index].style.display = "none"
+            updateCategoryButtons[index].style.display = "none"
+            itemCategoryInputs[index].style.display = "inline-block"
+            saveUpdateCategoryButtons[index].style.display = "inline-block"
+
+            saveUpdateCategoryButtons[index].addEventListener('click', ()=>{
+                itemCategorySpans[index].style.display = "inline-block"
+                updateCategoryButtons[index].style.display = "inline-block"
+                itemCategorySpans[index].innerHTML = itemCategoryInputs[index].value;
+                itemCategoryInputs[index].style.display = "none"
+                saveUpdateCategoryButtons[index].style.display = "none"
+            })
+        })
+    })
+}
+
+function updateItemPrice() {
+    const updatePriceButtons = document.querySelectorAll(".updatePriceButton");
+    const itemPriceSpans = document.querySelectorAll(".itemPrice");
+    const itemPriceInputs = document.querySelectorAll(".itemPriceInput");
+    const saveUpdatePriceButton = document.querySelectorAll(".saveUpdatePriceButton");
+
+    updatePriceButtons.forEach((btn, index)=>{
+        btn.addEventListener('click', ()=>{
+            itemPriceSpans[index].style.display = "none"
+            updatePriceButtons[index].style.display = "none"
+            itemPriceInputs[index].style.display = "inline-block"
+            saveUpdatePriceButton[index].style.display = "inline-block"
+
+            saveUpdatePriceButton[index].addEventListener('click', ()=>{
+                itemPriceSpans[index].style.display = "inline-block"
+                updatePriceButtons[index].style.display = "inline-block"
+                itemPriceSpans[index].innerHTML = `Ksh ${(parseInt(itemPriceInputs[index].value)).toFixed(2)}`;
+                itemPriceInputs[index].style.display = "none"
+                saveUpdatePriceButton[index].style.display = "none"
+            })
+        })
+    })
+}
 function generateListHtml() {
     food_list.forEach((item)=>{
         let foodDiv = `
@@ -318,13 +392,31 @@ function generateListHtml() {
                         <img src="./resources/foods-images/${item.image}.png" alt="">
                     </div>
                     <div class="name">
-                        ${item.name}
+                        <span class="itemName">${item.name}</span>
+                        <button class="updateNameButton btn">update</button>
+                        <input type="text" class="itemNameInput" value="${item.name}">
+                        <button class="saveUpdateNameButton btn">save</button>
                     </div>
                     <div class="category">
-                        ${item.category}
+                        <span class="itemCategory">${item.category}</span>
+                        <button class="updateCategoryButton btn">update</button>
+                        <select name="itemCategoryInput" id="itemCategoryInput" value="${item.category}" class="itemCategoryInput">
+                            <option value="Salad">Salad</option>
+                            <option value="Rolls">Rolls</option>
+                            <option value="Deserts">Mercedes</option>
+                            <option value="Sandwich">Sandwich</option>
+                            <option value="Cake">Cake</option>
+                            <option value="Pure Veg">Pure Veg</option>
+                            <option value="Pasta">Pasta</option>
+                            <option value="Noodles">Noodles</option>
+                        </select> 
+                        <button class="saveUpdateCategoryButton btn">save</button> 
                     </div>
                     <div class="total-price">
-                        Ksh ${(item.price*10).toFixed(2)}
+                        <span class="itemPrice">Ksh ${(item.price*10).toFixed(2)}</span>
+                        <button class="updatePriceButton btn">update</button>
+                        <input type="number" class="itemPriceInput" value="${(item.price*10).toFixed(2)}">
+                        <button class="saveUpdatePriceButton btn">save</button> 
                     </div>
                     <div>
                         <button class="deleteButton">&times;</button> 
@@ -344,5 +436,7 @@ function handleDeleteItem(){
         })
     })
 }
+
+
 
 

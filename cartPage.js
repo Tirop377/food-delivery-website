@@ -357,9 +357,13 @@ function findTotal(){
             }
         })
     })
-
     return sum;
 }
+
+
+proceedToCheckOutBtn.addEventListener('click', ()=>{
+    window.location.href = 'checkOutPage.html';
+})
 
 
 

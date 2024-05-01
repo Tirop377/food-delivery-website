@@ -2,13 +2,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 body{
     display: flex;
     flex-direction: column;
-    background-color: whitesmoke;
+    background-color: rgb(238, 236, 236);
 }
 
 .main-section{
@@ -20,6 +20,8 @@ body{
 header{
     width: 100%;
     position: fixed;
+    left: 0;
+    right: 0;
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -27,6 +29,7 @@ header{
     padding: 40px 20px;
     background-color: white;
     z-index: 10;
+    border-bottom: 1px solid gray;
 }
 
 .searchForm{
@@ -137,7 +140,7 @@ header{
     display: none;
 }
 
-.sign-in, .log-in-btn{
+.sign-in, .log-in-btn, .log-out-btn{
     padding: 10px 20px;
     background-color: rgba(255, 68, 0, 0.822);
     color: whitesmoke;
@@ -147,11 +150,54 @@ header{
     font-size: 19px;
     font-weight: 600;
     transition: all 0.5s;  
+   
 }
 
-.sign-in:hover, .log-in-btn:hover{
+.sign-in:hover, .log-in-btn:hover, .log-out-btn:hover{
     transform: scale(1.1);
 }
+
+.log-out-btn, .user-profile{
+     display: none;
+}
+
+.userProfileContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-tooltip{
+    position: absolute;
+    padding: 5px 10px;
+    bottom: -40px;
+    background-color: aquamarine;
+    transform: scale(0);
+    transition: all .2s;
+}
+
+.user-profile{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.userProfileContainer:hover .user-tooltip{
+    transform: scale(1);
+}
+.user-profile img{
+    width: 25px;  
+}
+
+
+
+
+
+/* main section */
 
 .image-back{
     height: 500px;

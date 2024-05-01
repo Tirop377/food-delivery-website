@@ -3,29 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Order Page</title>
+    <title>My Orders Page</title>
     <link rel="stylesheet" href="myOrderPage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signUp-logIn.css">
 </head>
 <body>
-    <section class="main-section">
-        <header>
-            <img src="resources/logo.png" alt="logo">
-            <ul class="links">
+    <div class="pop-up"></div>
+    <header>
+        <img src="resources/logo.png" alt="logo">
+        <ul class="links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Menu</a></li>
                 <li><a href="#">Mobile app</a></li>
                 <li><a href="#">Contact us</a></li>
-            </ul>
-            <div class="right-div">
-                <a href="#"><img src="resources/icons/search_icon.png" alt="search" height="30px"></a>
-                <a href="cartPage.html"><img src="resources/icons/basket_icon.png" alt="search" height="30px"></a>
-                <button class="sign-in" >Sign in</button>
+        </ul> 
+        <div class="right-div">
+            <div class="userProfileContainer">
+                <button class="user-profile"><img src="./resources/icons/profile_icon.png" alt=""></button>
+                <span class="user-tooltip">Kevin</span>
             </div>
-        </header>
+            <button class="log-out-btn" >log out</button>
 
+            <button class="sign-in" >Sign in</button>
+            <button class="log-in-btn" >log in</button>
+        </div>
+    </header>
+    <div class="userInfoContainer">
+        <div class="user">
+            <h3>User Information</h3>
+            <div class="user-Image">
+                <img src="./resources/profile-pic.jpg" alt="">
+            </div>
+            <p>Name: <span class="user-FullName">Kevin Biwott</span></p>
+            <p>Area Name: <span class="areaName">Juja</span></p>
+            <p>Street: <span class="street">Kiongo Street</span> </p>
+            <p>Building: <span class="building">Graceland Building</span> </p>
+            <p>Phone Number: <span>011555*****</span></p>
+
+            <button class="updateInfoBtn">Update</button>
+            
+        </div>
+        <form class="main form">
+            <div class="deliveryinfo">
+                <div>
+                    <input type="text" class="firstNameInputBox" placeholder="First name" required>
+                    <input type="text" placeholder="Last name" required>
+                </div>
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Street">
+                <div>
+                    <input type="text" placeholder="Building" required>
+                    <input type="text" placeholder="Area Name" required>
+                </div>
+                <input type="text" placeholder="Phone number" required>
+                <button type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+    <section class="main-section">
         <div class="main">
             <h1>My Orders</h1>
             <div class="myordersContainer">
@@ -41,15 +78,15 @@
                     </div>
 
                     <div class="totalPrice">
-                        Ksh 500.00
+                        Ksh <span>500.00</span>
                     </div>
                     <div>
-                        items: 2
+                        items: <span>2</span>
                     </div>
                     <div>
                         <p>
                             <img src="./resources/icons/selector_icon.png" alt="" class="icon">
-                            Food processing
+                            <span>Food processing</span>
                         </p>
                     </div>
 
@@ -66,30 +103,96 @@
                         <h4> Date: April 22</h4>
                     </div>
                     <div class="description">
-                        Githeri &times; 3, Waru &times; 6
+                        Githeri &times; 2, Waru &times; 6
                     </div>
 
                     <div class="totalPrice">
-                        Ksh 500.00
+                        Ksh <span>200.00</span>
                     </div>
                     <div>
-                        items: 2
+                        items: <span>2</span>
                     </div>
                     <div>
                         <p>
                             <img src="./resources/icons/selector_icon.png" alt="" class="icon">
-                            Food processing
+                            <span>Delivered</span>
                         </p>
                     </div>
-
+                </div>
+                <div class="item">
                     <div>
-                        <button class="trackbtn">Track Order</button>
+                        <img src="./resources/icons/parcel_icon.png" alt="">
+                    </div>
+                    <div>
+                        <h4> Date: April 23</h4>
+                    </div>
+                    <div class="description">
+                        Githeri &times; 10, Waru &times; 6
+                    </div>
+
+                    <div class="totalPrice">
+                        Ksh <span>600.00</span>
+                    </div>
+                    <div>
+                        items: <span>2</span>
+                    </div>
+                    <div>
+                        <p>
+                            <img src="./resources/icons/selector_icon.png" alt="" class="icon">
+                            <span>Delivered</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="./resources/icons/parcel_icon.png" alt="">
+                    </div>
+                    <div>
+                        <h4> Date: April 24</h4>
+                    </div>
+                    <div class="description">
+                        Githeri &times; 3, Waru &times; 6
+                    </div>
+
+                    <div class="totalPrice">
+                        Ksh <span>500.00</span>
+                    </div>
+                    <div>
+                        items: <span>2</span>
+                    </div>
+                    <div>
+                        <p>
+                            <img src="./resources/icons/selector_icon.png" alt="" class="icon">
+                            <span>Delivered</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <img src="./resources/icons/parcel_icon.png" alt="">
+                    </div>
+                    <div>
+                        <h4> Date: April 25</h4>
+                    </div>
+                    <div class="description">
+                        Githeri &times; 3, Waru &times; 6
+                    </div>
+
+                    <div class="totalPrice">
+                        Ksh <span>500.00</span>
+                    </div>
+                    <div>
+                        items: <span>2</span>
+                    </div>
+                    <div>
+                        <p>
+                            <img src="./resources/icons/selector_icon.png" alt="" class="icon">
+                            <span>Delivered</span>
+                        </p>
                     </div>
 
                 </div>
                 
-            </div>
-
         </div>
     </section>
 
@@ -134,6 +237,10 @@
             </p>
         </div>
     </footer>
+    <div id="overlay"></div>
+
+    <script src="signUp-logIn.js"></script>
+    <script src="myOrderPage.js"></script>
     
 </body>
 </html>

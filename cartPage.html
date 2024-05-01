@@ -9,26 +9,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signUp-logIn.css">
 </head>
 <body>
     <div class="pop-up"></div>
-    <section class="main-section">
-        <header>
-            <img src="resources/logo.png" alt="logo">
-            <ul class="links">
+    <header>
+        <img src="resources/logo.png" alt="logo">
+        <ul class="links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Menu</a></li>
                 <li><a href="#">Mobile app</a></li>
                 <li><a href="#">Contact us</a></li>
-            </ul>
-            <div class="right-div">
-                <a href="#"><img src="resources/icons/search_icon.png" alt="search" height="30px"></a>
-                <a href="cartPage.html"><img src="resources/icons/basket_icon.png" alt="search" height="30px"></a>
-                <button class="sign-in" >Sign in</button>
+        </ul> 
+        <div class="right-div">
+            <div class="userProfileContainer">
+                <button class="user-profile"><img src="./resources/icons/profile_icon.png" alt=""></button>
+                <span class="user-tooltip">Kevin</span>
             </div>
-        </header>
+            <button class="log-out-btn" >log out</button>
 
+            <button class="sign-in" >Sign in</button>
+            <button class="log-in-btn" >log in</button>
+        </div>
+    </header>
+   
+    <section class="main-section">
         <section class="items-area">
+            <h1>Cart Content</h1>
             <div class="headings">
                 <h2>Item</h2>
                 <h2>Title</h2>
@@ -103,7 +109,8 @@
         </div>
     </footer>
     <div id="overlay"></div>
-     <script src="signUp-logIn.js"></script>
+
+    <script src="signUp-logIn.js"></script>
     <script src="cartPage.js"></script>
 </body>
 </html>
