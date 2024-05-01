@@ -24,3 +24,13 @@ form.addEventListener('submit', ()=>{
 
     form.style.display = "none"  
 })
+
+const imageContainer = document.querySelector(".con");
+const imageInput = document.querySelector(".imageInput");
+
+let newImageName;
+imageInput.addEventListener('change', ()=>{
+    imageContainer.src = URL.createObjectURL(imageInput.files[0]);
+    console.log(URL.createObjectURL(imageInput.files[0]));
+    newImageName = imageInput.files[0].name;
+})
